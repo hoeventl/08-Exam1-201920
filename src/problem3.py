@@ -3,8 +3,8 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Thomas Hoevener.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the  sum_of_digits  function defined below.
+# DONE: 2.  READ the doc-string for the  sum_of_digits  function defined below.
 # It is the same  sum_of_digits  function that you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -172,6 +172,12 @@ def problem3a(r, s):
     #    **  use (call) the   sum_of_digits   function
     #    **  that is DEFINED ABOVE.
     ###########################################################################
+    total = 0
+    for k in range(s + 1 - r):
+        value = (r + k) ** 3
+        if sum_of_digits(value) % 2 != 0:
+            total = total + (r + k)
+    return total
 
 
 def run_test_problem3b():
